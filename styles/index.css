@@ -1,91 +1,74 @@
-* {
+
+body,
+html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
 }
 
 .background {
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: url(/Images/univers.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: 0;
 }
+
 
 .astro {
-  width: 130px;
-  height: 130px;
-  position: fixed;
-  top: 40vh;
-  left: 30vw;
-  z-index: 100;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 200px;
+  left: 100px;
+  z-index: 10;
 }
 
-.pipe_sprite {
-  position: fixed;
-  top: 40vh;
-  left: 100vw;
-  height: 70vh;
-  width: 6vw;
-  background: white;
-  border: 5px solid black;
+.astro img {
+  width: 100%;
+  height: 100%;
 }
+
+
+.pipe_sprite {
+  position: absolute;
+  width: 60px;
+  background-color: red;
+  z-index: 5;
+}
+
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: white;
+  z-index: 15;
+  text-shadow: 1px 1px 2px black;
+}
+
 
 .message {
   position: absolute;
-  z-index: 10;
+  top: 40%;
+  left: 35%;
+  font-size: 32px;
   color: white;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50% -50%);
   text-align: center;
+  z-index: 20;
+  text-shadow: 2px 2px 4px black;
+  background: black;
+ 
 }
+
 .messageStyle {
-  background: white;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5%;
-}
-
-.score {
-  position: fixed;
-  z-index: 10;
-  height: 10vh;
-  font-size: 10vh;
-  font-weight: 100;
-  color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  top: 0;
-  left: 0;
-  margin: 10px;
-}
-
-.score_val{
-    color: gold;
-    font-weight: bold;
-}
-
-@media only screen and (max-width:1080px){
-    .message {
-        font-size: 50px;
-        top: 50%;
-        white-space: nowrap;
-    }
-
-    .score {
-        font-size: 8vh;
-    }
-
-    .astro {
-        width: 120px;
-        height: 90px;
-    }
-
-    .pipe_sprite {
-        width: 14vw;
-    }
+  display: block;
 }
