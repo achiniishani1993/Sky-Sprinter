@@ -39,14 +39,14 @@ document.addEventListener("keydown", (e) => {
 //  JUMP
 document.addEventListener("keydown", (e) => {
   if ((e.key === "ArrowUp" || e.key === " ") && game_state === "play") {
-    img.src = "Images/astro-2.png";
+    img.src = "images/astro-2.png";
     astro_dy = -8;
   }
 });
 
 document.addEventListener("keyup", (e) => {
   if ((e.key === "ArrowUp" || e.key === " ") && game_state === "play") {
-    img.src = "Images/astro.png";
+    img.src = "images/astro.png";
   }
 });
 
