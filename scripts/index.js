@@ -46,7 +46,7 @@ document.addEventListener("keydown", (e) => {
 
 document.addEventListener("keyup", (e) => {
   if ((e.key === "ArrowUp" || e.key === " ") && game_state === "play") {
-    img.src = "../images/astro.png";
+    img.src = "images/astro.png";
   }
 });
 
